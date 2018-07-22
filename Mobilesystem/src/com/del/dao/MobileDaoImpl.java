@@ -10,22 +10,7 @@ public class MobileDaoImpl implements MobileDao {
     private double paymentMade =0;
     private String login="9903584913";
     private String password="del123";
-    @Override
-    public void depositAmount(double amount) {
-        balance += amount;      
-    }
-    @Override
-    public double getAmount(double amount) throws MobileException {
-        double bal = balance - amount;
-        double minBalance=0;
-		if(bal<minBalance) {
-            throw new MobileException(Message.LOW_BALANCE);
-        }
-        else {
-            balance = bal;
-        }
-        return amount;
-    }
+  
     @Override
     public boolean authenticate(String login, String password) {
         return this.login.equals(login) && 

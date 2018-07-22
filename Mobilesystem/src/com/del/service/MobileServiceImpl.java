@@ -12,17 +12,7 @@ public class MobileServiceImpl implements MobileService {
     public MobileServiceImpl() {
     mDao = new MobileDaoImpl();
     }
-    @Override
-    public void depositAmount(double amount)throws MobileException {
-    	
-        isAmountNegative(amount);
-        mDao.depositAmount(amount);
-    }
-    @Override
-    public double getAmount(double amount) throws MobileException {
-        isAmountNegative(amount);
-        return mDao.getAmount(amount);
-    }
+  
     private boolean isAmountNegative(double amount)
                  throws MobileException {
         if(amount<0) {

@@ -4,9 +4,7 @@ import com.del.exception.MobileException;
 
 public interface MobileService {
 
-	void depositAmount(double amount) throws MobileException;
-	 
-    double getAmount(double amount) throws MobileException;
+
  
     boolean authenticate(String login, String password);
 

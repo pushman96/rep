@@ -35,8 +35,15 @@ public class MobileClient {
 	                    System.out.println("PAY PENDING AMOUNT");
 	                    try {
 	                       System.out.println("Enter amount to pay: ");
-	                       double payment = scan.nextDouble(); 
-	                       System.out.println(mService.pay(payment));                    
+	                       double payment = scan.nextDouble();
+	                       if(payment>0)
+	                       {
+	                       System.out.println(mService.pay(payment));
+	                       }
+	                       else
+	                       {
+	                    	   System.out.println("Please enter positive amount");
+	                       }
 	                    } catch (InputMismatchException e) {
 	                        System.err.println("Enter number only");
 	                        scan.nextLine();
